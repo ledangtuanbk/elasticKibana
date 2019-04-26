@@ -1,7 +1,7 @@
 version: '3'
 services:
   elasticsearch:
-    image: docker.io/elasticsearch:7.0.0
+    image: docker.io/elasticsearch:6.5.4
     container_name: elasticsearch
     environment:
       - discovery.type=single-node
@@ -12,7 +12,7 @@ services:
       - 9300:9300
     restart: always
   kibana:
-    image: docker.io/kibana:7.0.0
+    image: docker.io/kibana:6.5.4
     container_name: kibana
     links:
       - "elasticsearch"
